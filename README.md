@@ -114,25 +114,35 @@ Watch this [Mockaroo Tutorial](https://www.youtube.com/watch?v=_TVTHtm3xXc) for 
 
 ---
 
-## 🧩 Bonus Challenges
+## 📁 Recommended Project Folder Structure
 
-- Create a dashboard-friendly KPI view (Revenue, AOV, Repeat Rate, New Customers)
-- Use `CASE WHEN`, `CTE`, `JOIN`, and `GROUP BY` effectively
-- Document assumptions and limitations in your analysis
+Organize your SQL project like a real-world data team. This makes your work **modular**, **scalable**, and **easy to navigate**.
 
----
-
-## 🛠️ Getting Started
-
-1. Import your SQL data into a database (MySQL, PostgreSQL, SQLite, etc.)
-2. Explore each table with `SELECT *`
-3. Begin answering questions using structured queries
-
----
-
-## 📩 Questions?
-
-Contact your instructor or raise an issue in the class Slack/Teams channel.
-
-Happy querying!  
-— Data Science Bootcamp Team
+```text
+retail_analytics_sql_project/
+│
+├── 📄 README.md                   # Project overview, context, instructions
+├── 📁 data/
+│   ├── customers.sql             # INSERTs or CSV/SQL data dump
+│   ├── products.sql
+│   ├── orders.sql
+│   ├── order_items.sql
+│   └── schema.sql                # All CREATE TABLE statements
+│
+├── 📁 queries/
+│   ├── 01_sales_analysis.sql     # Revenue & category insights
+│   ├── 02_customer_insights.sql # CLV, segmentation, repeat rate
+│   ├── 03_product_performance.sql
+│   ├── 04_data_quality_checks.sql
+│   └── 99_bonus_tasks.sql        # KPI view, anomaly checks, stored procs
+│
+├── 📁 outputs/
+│   ├── summary.md                # Answers/explanations
+│   └── charts/                   # Optional: screenshots/plots
+│
+├── 📁 mockaroo_schemas/          # JSON schemas for data generation
+│   └── customers-schema.json
+│
+└── 📁 setup/
+    ├── docker-compose.yml        # Optional: for DB setup (MySQL/Postgres)
+    └── init.sql                  # Optional: full init script for tables + data
