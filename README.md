@@ -85,27 +85,48 @@ Each student/team must submit the following:
 
 ---
 
+## 🔧 Data Generation using Mockaroo
+
+We will use [Mockaroo](https://mockaroo.com) to generate sample data. It’s a powerful tool that allows you to define schemas and generate random data in SQL or CSV format.
+
+### How to Generate Your Dataset
+
+1. Visit [https://mockaroo.com](https://mockaroo.com)
+2. Click “Create Schema”
+3. For each table (`CUSTOMERS`, `PRODUCTS`, `ORDERS`, `ORDER_ITEMS`), add columns matching the schema above:
+   - Use types like **Full Name**, **Email Address**, **Row Number**, **City**, **Country**, **Product**, **Category**, **Decimal**, **Date**, etc.
+4. For foreign keys:
+   - First generate and export the parent tables (e.g., `CUSTOMERS`)
+   - Upload them as **datasets**
+   - In child tables, use **Dataset Column** to reference the appropriate keys (e.g., `customer_id`, `product_id`)
+5. Choose **SQL** as your export format
+6. Set desired row counts:
+   | Table        | Rows  |
+   |--------------|-------|
+   | CUSTOMERS    | 300   |
+   | PRODUCTS     | 100   |
+   | ORDERS       | 1000  |
+   | ORDER_ITEMS  | 2500  |
+7. Download the generated `.sql` files and import them into your database
+
+### Video Tutorial
+Watch this [Mockaroo Tutorial](https://www.youtube.com/watch?v=_TVTHtm3xXc) for a quick demo on building realistic datasets with mock relationships.
+
+---
+
 ## 🧩 Bonus Challenges
 
-- Create a dashboard-friendly KPI table (Revenue, AOV, Repeat Rate, New Customers)
+- Create a dashboard-friendly KPI view (Revenue, AOV, Repeat Rate, New Customers)
 - Use `CASE WHEN`, `CTE`, `JOIN`, and `GROUP BY` effectively
 - Document assumptions and limitations in your analysis
 
 ---
 
-## 📁 Getting Started
+## 🛠️ Getting Started
 
-1. Import the `retail_db.sql` script (provided separately)
-2. Use your preferred SQL environment (PostgreSQL, MySQL, SQL Server, SQLite)
-3. Begin exploring the data using `SELECT *` statements
-
----
-
-## 🚀 Tips
-
-- Think like a business analyst, not just a coder
-- Explain your logic clearly — use comments in your SQL!
-- Prioritize readability and efficiency in your queries
+1. Import your SQL data into a database (MySQL, PostgreSQL, SQLite, etc.)
+2. Explore each table with `SELECT *`
+3. Begin answering questions using structured queries
 
 ---
 
